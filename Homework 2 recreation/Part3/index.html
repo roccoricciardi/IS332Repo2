@@ -17,7 +17,36 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <script src="boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+        
+        <!-- from part 2 -->
+        <meta charset="UTF-8">
+		<title>Bootstrap 3 swipe support example - jQuery Mobile</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<style>
+		.content-area {
+			position: relative;
+			width: 960px; 
+			margin: 0 auto;
+			}
+		  .carousel-indicators li { 
+		    border-radius: 50%; 
+	   	 height: 20px;
+	   	 width: 20px;
+	 	 }
+	  	.carousel-indicators .active {
+	   	 height: 25px;
+	   	 width: 25px;
+ 		}
+		</style>     
     </head>
+    
+    
+    
+    
+    
+    
+    
+    
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -25,6 +54,67 @@
 
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
+        
+        <b><b><b>
+        
+        <!-- carousel from part 2 -->
+         <div class="content-area">
+ 			<div id="myCarousel" class="carousel slide">
+		  <!-- Indicators -->
+	  		<ol class="carousel-indicators">
+	   			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    		<li data-target="#myCarousel" data-slide-to="1"></li>
+	   			<li data-target="#myCarousel" data-slide-to="2"></li>
+	  		</ol>
+
+ 	 <!-- Wrapper for slides -->
+ 	 <div class="carousel-inner">
+ 	   		<div class="item active">
+ 	   		<img src="http://www.craftbarrow.com/ekmps/shops/julius/images/maki-old-gold-paper-napkins-23993-p[ekm]433x433[ekm].jpg">
+ 	    	</div>
+ 	    	
+ 	    	<div class="item">
+ 	      	<img src="http://sdihousing.com/wp-content/uploads/2011/09/Solid-Colors-Spectrum-Blue.png">
+ 	  		</div>
+  	 	<div class="item">
+       <img src="http://sdihousing.com/wp-content/uploads/2011/09/Solid-Colors-Specrtum-Red.png">
+   		</div>
+   	 </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</div>
+</div>
+
+
+
+	<script>  
+	$(document).ready(function() {  
+  		 $(".carousel-inner").swiperight(function() {  
+    		  $(this).parent().carousel('prev');  
+	    		});  
+		   $(".carousel-inner").swipeleft(function() {  
+		      $(this).parent().carousel('next');  
+	   });  
+	});  
+	</script>  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -32,5 +122,11 @@
         <script src="boilerplate/js/main.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/jquery.mobile.custom.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
     </body>
 </html>
